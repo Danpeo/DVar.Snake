@@ -33,7 +33,7 @@ class Game:
     def __init__(self) -> None:
         self.snake = Snake()
         self.food = Food(self.snake.body)
-        self.is_running = True
+        self.is_running = False
         
     def draw(self):
         self.snake.draw()
@@ -68,8 +68,7 @@ class Game:
         self.food.position = self.food.generate_random_pos(self.snake.body)
         self.is_running = False
         
-
-        
+    
 class Snake:
     def __init__(self) -> None:
         self.initialize()
